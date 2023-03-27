@@ -6,8 +6,6 @@ namespace Flaskeoppgaver
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Legg til Bogosort!");
-
             Bottle BottleOne = new(5);
             Bottle BottleTwo = new(3);
             SortingOfBottles SortingAlgo = new(2, BottleOne, BottleTwo);
