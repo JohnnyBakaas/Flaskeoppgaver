@@ -19,8 +19,11 @@
 
             int iterations = 0;
 
-            while (BOne.GetVolume() != WantedVolume || BTwo.GetVolume() != WantedVolume)
+            bool checkIfOneIsCorect = true;
+
+            while (checkIfOneIsCorect)
             {
+
                 iterations++;
                 int kake = rnd.Next(6);
 
@@ -48,9 +51,17 @@
                 {
                     BTwo.EmptyBotle();
                 }
+
+                if (BOne.GetVolume() == WantedVolume || BTwo.GetVolume() == WantedVolume)
+                {
+                    checkIfOneIsCorect = false;
+                }
+                if (iterations % 10000 == 0) { Console.WriteLine(iterations); }
             }
             Console.WriteLine("Long live THE BOGO");
-            Console.WriteLine("Wanted: " + WantedVolume + ". BOGO: " + BOne.GetVolume());
+            Console.WriteLine("Wanted: " + WantedVolume + ". BOGO One: " + BOne.GetVolume());
+            Console.WriteLine("Wanted: " + WantedVolume + ". BOGO Two: " + BTwo.GetVolume());
+
             Console.WriteLine("BOGO gjorde det på " + iterations + " ganger");
         }
     }

@@ -8,7 +8,7 @@ namespace Flaskeoppgaver
         {
             Bottle BottleOne = new(5);
             Bottle BottleTwo = new(3);
-            SortingOfBottles SortingAlgo = new(2, BottleOne, BottleTwo);
+            SortingOfBottles SortingAlgo = new(4, BottleOne, BottleTwo);
             SortingAlgo.Bogosort();
         }
     }
