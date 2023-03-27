@@ -19,7 +19,7 @@
 
             int iterations = 0;
 
-            while (BOne.GetVolume() != WantedVolume)
+            while (BOne.GetVolume() != WantedVolume || BTwo.GetVolume() != WantedVolume)
             {
                 iterations++;
                 int kake = rnd.Next(6);
